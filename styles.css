@@ -1,0 +1,120 @@
+/* Font */
+* {
+  font-family: Arial;
+}
+/* Img */
+img {
+  width: 30px;
+  height: auto;
+}
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #39569c;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+#facebook_img {
+  width: 50px;
+  margin: 5px;
+}
+header .horizontal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header h1 {
+  margin-left: 5px;
+  font-size: 1.5em;
+}
+/* header links*/
+header .horizontal a {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* list dots removal */
+header .horizontal li {
+  list-style: none;
+}
+
+/* FOOTER*/
+footer {
+  position: sticky;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  background-color: rgb(50, 80, 162);
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin: 0px -10px -10px -10px;
+}
+/* footer links */
+footer address {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer address a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* MAIN STYLES */
+main {
+  margin: 100px 0px;
+  margin-bottom: 200px;
+}
+/* aside paragrahs */
+aside {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  text-align: right;
+  padding-right: 20px;
+}
+/* Main sections */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1300px;
+  justify-content: space-evenly;
+}
+.sections {
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  flex-wrap: wrap;
+  width: 500px;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  padding: 15px;
+}
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 500px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(175, 173, 173);
+}
+.section_header img {
+  margin-right: 10px;
+}
+.section_body {
+  width: 450px;
+}
