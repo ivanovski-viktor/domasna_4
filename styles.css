@@ -1,120 +1,171 @@
-/* Font */
 * {
   font-family: Arial;
 }
-/* Img */
+body {
+  margin: 0;
+  padding: 0;
+}
 img {
   width: 30px;
   height: auto;
 }
+
 /* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #39569c;
-  color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-#facebook_img {
-  width: 50px;
-  margin: 5px;
-}
-header .horizontal {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-header h1 {
-  margin-left: 5px;
-  font-size: 1.5em;
-}
-/* header links*/
-header .horizontal a {
-  margin: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-}
-/* list dots removal */
-header .horizontal li {
-  list-style: none;
-}
-
-/* FOOTER*/
-footer {
-  position: sticky;
-  bottom: -100px;
-  left: 0;
-  right: 0;
-  background-color: rgb(50, 80, 162);
-  display: flex;
-  justify-content: space-between;
   height: 60px;
-  margin: 0px -10px -10px -10px;
+  background-color: rgb(50, 80, 162);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-/* footer links */
-footer address {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+/* header icon */
+#facebook-img {
+  width: 50px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
 }
-footer address a {
-  margin: 10px;
+/* header links */
+.header-links {
+  display: inline-block;
+  position: fixed;
+  top: 7.5px;
+  right: 5px;
+  list-style: none;
+  width: 220px;
+  height: auto;
+}
+.header-links li {
+  display: inline;
+}
+.header-links li a {
   text-decoration: none;
-  color: black;
-  font-size: 1em;
-}
-footer p {
-  display: flex;
-  align-items: center;
-  margin: 10px;
+  color: white;
+  margin: 0px 10px;
+  margin-right: 0px;
 }
 
-/* MAIN STYLES */
+/* MAIN */
 main {
   margin: 100px 0px;
   margin-bottom: 200px;
 }
-/* aside paragrahs */
-aside {
-  position: fixed;
-  top: 70px;
-  right: 0;
-  text-align: right;
-  padding-right: 20px;
-}
-/* Main sections */
-main {
+
+/* main sections */
+#sections {
   display: flex;
   flex-wrap: wrap;
-  width: 1300px;
-  justify-content: space-evenly;
+  margin-right: 14%;
 }
-.sections {
-  display: flex;
-  align-items: center;
-  background-color: antiquewhite;
-  flex-wrap: wrap;
-  width: 500px;
+.all-sections {
+  flex-grow: 1; /* Allow sections to grow */
+  max-width: calc(45% - 20px); /* Set a maximum width for each section */
+  min-width: 200px; /* Set a minimum width to avoid excessive shrinking */
+  background-color: rgb(217, 230, 251);
   border-radius: 10px;
-  margin: 10px 10px 10px 10px;
+  margin: 20px;
   padding: 15px;
 }
-.section_header {
+.section-header {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 500px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(175, 173, 173);
 }
-.section_header img {
+.section-header img {
   margin-right: 10px;
 }
-.section_body {
-  width: 450px;
+
+/* aside */
+aside {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  padding: 30px;
+  height: 100%;
+  background-color: rgb(217, 230, 251);
+}
+
+/* FOOTER */
+footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: rgb(218, 220, 221);
+  padding: 10px;
+}
+footer a,
+footer p {
+  text-decoration: none;
+  color: rgb(50, 80, 162);
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1200px) {
+  .all-sections {
+    max-width: 80%;
+  }
+}
+
+/* mobile Layout */
+@media (max-width: 1080px) {
+  /* header */
+  header {
+    height: 350px;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    margin: 0;
+  }
+  #facebook-img {
+    display: block;
+    position: static;
+    margin: 20px 50;
+    margin-left: 49%;
+  }
+  .header-links {
+    position: static;
+  }
+  .header-links li {
+    display: block;
+    margin: 50px 0;
+    margin-left: -20px;
+  }
+
+  /* MAIN */
+  main {
+    margin: 100px 0px;
+    margin-bottom: 0px;
+  }
+
+  /* sections */
+  #sections {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .all-sections {
+    background-color: rgb(217, 230, 251);
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 80%;
+  }
+  /* aside */
+  aside {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+  }
+  aside img {
+    margin-top: 50px;
+  }
 }
